@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Industries | Теневая связь</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-overlay"></div>
+
+<div class="container">
+    <nav class="nav-bar">
+        <div class="logo">DARK INDUSTRIES</div>
+        <div class="nav-links">
+            <a href="index.html">ОРУЖИЕ</a>
+            <a href="projects.html">ПРОЕКТЫ</a>
+            <a href="contact.html" class="active">ТЕНЬ</a>
+        </div>
+    </nav>
+
+    <div class="contact-container fade-up">
+        <h2>ЗАЩИЩЁННЫЙ КАНАЛ СВЯЗИ</h2>
+        <div class="edge-glow" style="width: 80px; margin: 15px 0 25px 0;"></div>
+        <p class="mono" style="margin-bottom: 2rem; line-height: 1.6;">Запросы на производство, закрытые контракты, нейросетевая аналитика. <br>Все коммуникации проходят через квантовое шифрование.</p>
+
+        <form id="shadowForm">
+            <div class="input-group">
+                <input type="text" placeholder="КОД ДОСТУПА / ПРОЕКТ" class="mono" id="accessCode">
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="ПОЗЫВНОЙ / СИСТЕМА" class="mono" id="callsign">
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="КВАНТОВЫЙ АДРЕС (E-MAIL)" class="mono" id="email">
+            </div>
+            <div class="input-group">
+                <textarea rows="5" placeholder="ЗАПРОС НА ВООРУЖЕНИЕ / СОТРУДНИЧЕСТВО..." class="mono" id="message"></textarea>
+            </div>
+            <button type="button" class="btn" id="sendBtn">ОТПРАВИТЬ ПО ЗАЩ. КАНАЛУ</button>
+        </form>
+
+        <div class="edge-glow" style="margin: 2rem 0;"></div>
+        
+        <div class="pgp-info">
+            <div class="mono" style="font-size: 0.7rem;">PGP KEY: 0xDARK_2075_STEEL</div>
+            <div class="mono" style="margin-top: 8px; font-size: 0.7rem;">Теневой узел: 11.0.4.89 | TOR: darkind77k3l.onion</div>
+            <div class="mono" style="margin-top: 8px; font-size: 0.7rem;">Рабочие частоты: 47.89 / 128.45 МГц (квантово-защищённые)</div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+    document.getElementById('sendBtn')?.addEventListener('click', () => {
+        const code = document.getElementById('accessCode')?.value || '';
+        const name = document.getElementById('callsign')?.value || '';
+        
+        if(code.trim() === '' || name.trim() === '') {
+            alert('[Dark Industries] ВНИМАНИЕ: Код доступа и позывной обязательны для идентификации в теневой сети.');
+        } else {
+            alert('[Dark Industries] ✅ Зашифрованный запрос принят. Ожидайте ответ через теневой протокол в течение 24 часов.');
+        }
+    });
+</script>
+</body>
+</html>
